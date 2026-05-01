@@ -1,5 +1,5 @@
 # 💫 About Me:
-Hi 👋 I'm Nikhil<br><br>💻 B.Tech CSE Student | Java Full Stack Developer  <br>⚡ Passionate about Backend Development, Scalable Systems & Problem Solving  <br><br>🔹 Tech Stack: Java, JavaScript, React.js, Node.js, Express.js, MongoDB  <br>🔹 Strong in Data Structures & Algorithms (175+ LeetCode problems solved)  <br>🔹 Currently building real-world full stack applications  <br><br>📌 Interested in Backend Engineering, System Design & AI-powered Applications  <br><br>Let's build impactful software 🚀
+Hi 👋 I'm Nikhil Chalamalla<br><br>💻 B.Tech CSE Student | Java Full Stack Developer  <br>⚡ Passionate about Backend Development, Scalable Systems & Problem Solving  <br><br>🔹 Tech Stack: Java, JavaScript, React.js, Node.js, Express.js, MongoDB  <br>🔹 Strong in Data Structures & Algorithms (175+ LeetCode problems solved)  <br>🔹 Currently building real-world full stack applications  <br><br>📌 Interested in Backend Engineering, System Design & AI-powered Applications  <br><br>Let's build impactful software 🚀
 
 
 ## 🌐 Socials:
