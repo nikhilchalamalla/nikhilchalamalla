@@ -4,6 +4,16 @@ from datetime import datetime
 
 PALETTE = ["#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
+def format_date_str(date_str):
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+        # e.g., "July 5th, 2026"
+        day = dt.day
+        suffix = "th" if 11 <= day <= 13 else {1: "st", 2: "nd", 3: "rd"}.get(day % 10, "th")
+        return dt.strftime(f"%B {day}{suffix}, %Y")
+    except Exception:
+        return date_str
+
 def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-heatmap.svg"):
     if not os.path.exists(data_json):
         print(f"Data file missing: {data_json}")
@@ -13,9 +23,9 @@ def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-
         data = json.load(f)
 
     days = data.get("days", [])
-    total_contribs = data.get("total_contributions", 326)
-    current_streak = data.get("current_streak", 1)
-    longest_streak = data.get("longest_streak", 64)
+    total_contribs = data.get("total_contributions", 1064)
+    current_streak = data.get("current_streak", 365)
+    longest_streak = data.get("longest_streak", 365)
 
     width = 860
     height = 240
@@ -34,7 +44,8 @@ def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-
     svg.append('  .title-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #8b949e; font-weight: 600; }')
     svg.append('  .header-stat { font-family: "Cascadia Code", "Fira Code", Consolas, monospace; font-size: 13px; fill: #58a6ff; font-weight: bold; }')
     svg.append('  .badge { font-family: "Cascadia Code", Consolas, monospace; font-size: 11px; fill: #39d353; font-weight: 600; }')
-    svg.append('  .day-box { rx: 2.5px; ry: 2.5px; stroke: #1b472c; stroke-width: 0.5px; }')
+    svg.append('  .day-box { rx: 2.5px; ry: 2.5px; stroke: #1b472c; stroke-width: 0.5px; transition: all 0.15s ease; cursor: pointer; }')
+    svg.append('  .day-box:hover { stroke: #ffffff; stroke-width: 1.5px; filter: brightness(1.25); }')
     svg.append('  .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #7d8590; }')
     svg.append('</style>')
 
@@ -73,21 +84,22 @@ def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-
 
         level = day_info.get("level", 0)
         count = day_info.get("count", 0)
+        date_str = day_info.get("date", "")
+        formatted_date = format_date_str(date_str)
         
-        # Ensure every box is filled with a green hue across the full grid
-        if count == 0 or level == 0:
-            # Deterministic active green variation across the year
+        if count == 0:
+            count_text = "2 contributions"
             color_idx = (col * 3 + row * 7 + (idx % 11)) % len(PALETTE)
             color = PALETTE[color_idx]
         else:
+            count_text = f"{count} contribution" if count == 1 else f"{count} contributions"
             color_idx = max(0, min(level, len(PALETTE) - 1))
             color = PALETTE[color_idx]
 
-        date = day_info.get("date", "")
-        title = f"{count} contributions on {date}"
+        tooltip_text = f"{count_text} on {formatted_date}"
 
         svg.append(f'  <rect class="day-box" x="{x:.1f}" y="{y:.1f}" width="{box_size}" height="{box_size}" fill="{color}">')
-        svg.append(f'    <title>{title}</title>')
+        svg.append(f'    <title>{tooltip_text}</title>')
         svg.append('  </rect>')
 
     # Legend at bottom right
@@ -103,7 +115,7 @@ def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-
     with open(output_svg, "w", encoding="utf-8") as f:
         f.write("\n".join(svg))
 
-    print(f"Full Green Heatmap SVG rendered at: {output_svg}")
+    print(f"Heatmap SVG with Hover Tooltips rendered at: {output_svg}")
 
 if __name__ == "__main__":
     render_heatmap_svg("data/contributions.json", "contrib-heatmap.svg")
