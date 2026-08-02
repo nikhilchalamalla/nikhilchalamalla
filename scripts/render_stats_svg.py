@@ -16,6 +16,7 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
     # 1. Generate github-stats.svg
     w, h = 420, 220
     s_svg = []
+    s_svg.append('<?xml version="1.0" encoding="UTF-8"?>')
     s_svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
     s_svg.append('<style>')
     s_svg.append('  .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1; }')
@@ -30,15 +31,15 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
     s_svg.append('  <circle class="dot" cx="16" cy="16" r="5" fill="#ff5f56" />')
     s_svg.append('  <circle class="dot" cx="30" cy="16" r="5" fill="#ffbd2e" />')
     s_svg.append('  <circle class="dot" cx="44" cy="16" r="5" fill="#27c93f" />')
-    s_svg.append('  <text class="title" x="60" y="20">⚡ Nikhil\'s GitHub Stats</text>')
+    s_svg.append('  <text class="title" x="60" y="20">Nikhil\'s GitHub Stats</text>')
     s_svg.append(f'  <line x1="0" y1="30" x2="{w}" y2="30" stroke="#30363d" stroke-width="1" />')
 
     # Stat items
     stats = [
         ("Total Contributions (Past Year):", f"{total_contribs:,}"),
-        ("Current Contribution Streak:", f"{current_streak} Days 🔥"),
-        ("Longest Streak Record:", f"{longest_streak} Days 🏆"),
-        ("Public Repositories:", "39 Repos 📦"),
+        ("Current Contribution Streak:", f"{current_streak} Days"),
+        ("Longest Streak Record:", f"{longest_streak} Days"),
+        ("Public Repositories:", "39 Repos"),
     ]
 
     for idx, (lbl, val) in enumerate(stats):
@@ -56,6 +57,7 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
 
     # 2. Generate top-langs.svg
     l_svg = []
+    l_svg.append('<?xml version="1.0" encoding="UTF-8"?>')
     l_svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
     l_svg.append('<style>')
     l_svg.append('  .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1; }')
@@ -69,7 +71,7 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
     l_svg.append('  <circle class="dot" cx="16" cy="16" r="5" fill="#ff5f56" />')
     l_svg.append('  <circle class="dot" cx="30" cy="16" r="5" fill="#ffbd2e" />')
     l_svg.append('  <circle class="dot" cx="44" cy="16" r="5" fill="#27c93f" />')
-    l_svg.append('  <text class="title" x="60" y="20">📊 Most Used Languages</text>')
+    l_svg.append('  <text class="title" x="60" y="20">Most Used Languages</text>')
     l_svg.append(f'  <line x1="0" y1="30" x2="{w}" y2="30" stroke="#30363d" stroke-width="1" />')
 
     langs = [
@@ -94,7 +96,7 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
     with open(langs_out, "w", encoding="utf-8") as f:
         f.write("\n".join(l_svg))
 
-    print(f"Generated local stats SVGs: {stats_out}, {langs_out}")
+    print(f"Generated 100% clean XML stats SVGs: {stats_out}, {langs_out}")
 
 if __name__ == "__main__":
     generate_stats_svgs()
