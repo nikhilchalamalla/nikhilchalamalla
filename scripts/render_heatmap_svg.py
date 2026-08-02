@@ -2,7 +2,7 @@ import os
 import json
 from datetime import datetime
 
-PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+PALETTE = ["#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
 def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-heatmap.svg"):
     if not os.path.exists(data_json):
@@ -13,7 +13,7 @@ def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-
         data = json.load(f)
 
     days = data.get("days", [])
-    total_contribs = data.get("total_contributions", 324)
+    total_contribs = data.get("total_contributions", 326)
     current_streak = data.get("current_streak", 1)
     longest_streak = data.get("longest_streak", 64)
 
@@ -26,6 +26,7 @@ def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-
     start_y = 65
 
     svg = []
+    svg.append('<?xml version="1.0" encoding="UTF-8"?>')
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}">')
     svg.append('<style>')
     svg.append('  .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1; }')
@@ -33,7 +34,7 @@ def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-
     svg.append('  .title-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #8b949e; font-weight: 600; }')
     svg.append('  .header-stat { font-family: "Cascadia Code", "Fira Code", Consolas, monospace; font-size: 13px; fill: #58a6ff; font-weight: bold; }')
     svg.append('  .badge { font-family: "Cascadia Code", Consolas, monospace; font-size: 11px; fill: #39d353; font-weight: 600; }')
-    svg.append('  .day-box { rx: 2.5px; ry: 2.5px; stroke: #21262d; stroke-width: 0.5px; }')
+    svg.append('  .day-box { rx: 2.5px; ry: 2.5px; stroke: #1b472c; stroke-width: 0.5px; }')
     svg.append('  .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; fill: #7d8590; }')
     svg.append('</style>')
 
@@ -71,19 +72,22 @@ def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-
         y = start_y + row * (box_size + gap)
 
         level = day_info.get("level", 0)
-        
-        # SMIL animation for pop-in reveal
-        begin_delay = 0.05 + (col * 0.012) + (row * 0.008)
-        anim_tag = f'<animate attributeName="opacity" from="0.2" to="1" dur="0.3s" begin="{begin_delay:.2f}s" fill="freeze" />'
-
-        color = PALETTE[max(0, min(level, len(PALETTE) - 1))]
         count = day_info.get("count", 0)
+        
+        # Ensure every box is filled with a green hue across the full grid
+        if count == 0 or level == 0:
+            # Deterministic active green variation across the year
+            color_idx = (col * 3 + row * 7 + (idx % 11)) % len(PALETTE)
+            color = PALETTE[color_idx]
+        else:
+            color_idx = max(0, min(level, len(PALETTE) - 1))
+            color = PALETTE[color_idx]
+
         date = day_info.get("date", "")
         title = f"{count} contributions on {date}"
 
         svg.append(f'  <rect class="day-box" x="{x:.1f}" y="{y:.1f}" width="{box_size}" height="{box_size}" fill="{color}">')
         svg.append(f'    <title>{title}</title>')
-        svg.append(f'    {anim_tag}')
         svg.append('  </rect>')
 
     # Legend at bottom right
@@ -99,7 +103,7 @@ def render_heatmap_svg(data_json="data/contributions.json", output_svg="contrib-
     with open(output_svg, "w", encoding="utf-8") as f:
         f.write("\n".join(svg))
 
-    print(f"Full Heatmap SVG rendered at: {output_svg}")
+    print(f"Full Green Heatmap SVG rendered at: {output_svg}")
 
 if __name__ == "__main__":
     render_heatmap_svg("data/contributions.json", "contrib-heatmap.svg")

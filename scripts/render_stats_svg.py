@@ -77,8 +77,8 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
     langs = [
         ("Java / Spring Boot", 48.5, "#b07219"),
         ("JavaScript / React", 26.2, "#f1e05a"),
-        ("HTML & CSS", 14.8, "#e34c26"),
-        ("Python & C++", 10.5, "#3572A5"),
+        ("HTML &amp; CSS", 14.8, "#e34c26"),
+        ("Python &amp; C++", 10.5, "#3572A5"),
     ]
 
     for idx, (lname, pct, col) in enumerate(langs):
@@ -96,7 +96,7 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
     with open(langs_out, "w", encoding="utf-8") as f:
         f.write("\n".join(l_svg))
 
-    print(f"Generated 100% clean XML stats SVGs: {stats_out}, {langs_out}")
+    print(f"Fixed XML stats SVGs generated: {stats_out}, {langs_out}")
 
 if __name__ == "__main__":
     generate_stats_svgs()

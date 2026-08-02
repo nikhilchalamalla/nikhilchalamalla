@@ -22,7 +22,7 @@
   <text class="header-name" x="20" y="123">Nikhil Chalamalla</text>
   <text x="20" y="157">
     <tspan class="key">Role: </tspan>
-    <tspan class="val">Java Full Stack & Backend Engineer</tspan>
+    <tspan class="val">Java Full Stack &amp; Backend Engineer</tspan>
   </text>
   <text x="20" y="191">
     <tspan class="key">Education: </tspan>
@@ -30,7 +30,7 @@
   </text>
   <text x="20" y="225">
     <tspan class="key">Specialization: </tspan>
-    <tspan class="val">Backend Systems & System Design</tspan>
+    <tspan class="val">Backend Systems &amp; System Design</tspan>
   </text>
   <text x="20" y="259">
     <tspan class="key">Primary Stack: </tspan>
@@ -41,7 +41,7 @@
     <tspan class="val">MongoDB, MySQL, PostgreSQL, Oracle</tspan>
   </text>
   <text x="20" y="327">
-    <tspan class="key">Cloud & DevOps: </tspan>
+    <tspan class="key">Cloud &amp; DevOps: </tspan>
     <tspan class="val">AWS, Azure, Docker, Kubernetes, Jenkins</tspan>
   </text>
   <text x="20" y="361">

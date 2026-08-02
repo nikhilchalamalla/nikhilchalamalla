@@ -8,12 +8,12 @@ def create_info_card(output_path="info-card.svg"):
         {"type": "prompt", "text": "nikhil@github ~ $ neofetch --system"},
         {"type": "separator", "text": "----------------------------------------"},
         {"type": "header", "label": "USER", "val": "Nikhil Chalamalla"},
-        {"type": "kv", "label": "Role", "val": "Java Full Stack & Backend Engineer"},
+        {"type": "kv", "label": "Role", "val": "Java Full Stack &amp; Backend Engineer"},
         {"type": "kv", "label": "Education", "val": "B.Tech CSE Student"},
-        {"type": "kv", "label": "Specialization", "val": "Backend Systems & System Design"},
+        {"type": "kv", "label": "Specialization", "val": "Backend Systems &amp; System Design"},
         {"type": "kv", "label": "Primary Stack", "val": "Java, SpringBoot, React.js, Express"},
         {"type": "kv", "label": "Databases", "val": "MongoDB, MySQL, PostgreSQL, Oracle"},
-        {"type": "kv", "label": "Cloud & DevOps", "val": "AWS, Azure, Docker, Kubernetes, Jenkins"},
+        {"type": "kv", "label": "Cloud &amp; DevOps", "val": "AWS, Azure, Docker, Kubernetes, Jenkins"},
         {"type": "kv", "label": "Algorithms", "val": "360+ LeetCode Solved"},
         {"type": "kv", "label": "Core Project", "val": "Real-Time Chat App (SpringBoot+STOMP)"},
         {"type": "kv", "label": "Goal", "val": "Building High-Throughput Cloud Systems"},
@@ -76,7 +76,7 @@ def create_info_card(output_path="info-card.svg"):
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(svg))
         
-    print(f"100% Clean XML Info Card SVG generated at: {output_path}")
+    print(f"Fixed Info Card SVG generated at: {output_path}")
 
 if __name__ == "__main__":
     create_info_card("info-card.svg")

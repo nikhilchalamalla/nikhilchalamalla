@@ -24,12 +24,12 @@
   <rect x="220" y="91" width="140" height="8" rx="4" fill="#21262d" />
   <rect x="220" y="91" width="57" height="8" rx="4" fill="#f1e05a" />
   <circle cx="30" cy="133" r="5" fill="#e34c26" />
-  <text class="lang-name" x="45" y="137">HTML & CSS</text>
+  <text class="lang-name" x="45" y="137">HTML &amp; CSS</text>
   <text class="pct" x="380" y="137" text-anchor="end">14.8%</text>
   <rect x="220" y="127" width="140" height="8" rx="4" fill="#21262d" />
   <rect x="220" y="127" width="32" height="8" rx="4" fill="#e34c26" />
   <circle cx="30" cy="169" r="5" fill="#3572A5" />
-  <text class="lang-name" x="45" y="173">Python & C++</text>
+  <text class="lang-name" x="45" y="173">Python &amp; C++</text>
   <text class="pct" x="380" y="173" text-anchor="end">10.5%</text>
   <rect x="220" y="163" width="140" height="8" rx="4" fill="#21262d" />
   <rect x="220" y="163" width="23" height="8" rx="4" fill="#3572A5" />
