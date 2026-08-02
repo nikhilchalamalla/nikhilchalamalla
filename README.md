@@ -85,7 +85,7 @@ My engineering journey is driven by a deep curiosity for how large-scale backend
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-###  prospect Databases & Persistence
+### 🔹 Databases & Persistence
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
@@ -114,8 +114,8 @@ My engineering journey is driven by a deep curiosity for how large-scale backend
 ## 📊 GitHub Analytics & Performance
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nikhilchalamalla&show_icons=true&theme=dark&hide_border=true&count_private=true" alt="Nikhil's GitHub Stats" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nikhilchalamalla&layout=compact&theme=dark&hide_border=true" alt="Nikhil's Top Languages" width="48%" />
+  <img src="github-stats.svg" alt="Nikhil's GitHub Stats" width="48%" />
+  <img src="top-langs.svg" alt="Nikhil's Top Languages" width="48%" />
 </div>
 
 <br>

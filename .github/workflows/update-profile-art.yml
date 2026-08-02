@@ -29,8 +29,11 @@ jobs:
       - name: Render Heatmap SVG
         run: python scripts/render_heatmap_svg.py
 
-      - name: Auto-commit Updated Heatmap
+      - name: Render Stats & Language SVGs
+        run: python scripts/render_stats_svg.py
+
+      - name: Auto-commit Updated Profile Art
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh contribution graph SVG [skip ci]"
-          file_pattern: "data/contributions.json contrib-heatmap.svg"
+          commit_message: "chore: refresh profile SVGs and contribution stats [skip ci]"
+          file_pattern: "data/contributions.json contrib-heatmap.svg info-card.svg github-stats.svg top-langs.svg"
