@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 560" width="490" height="560">
+<style>
+  @keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-15px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1; }
+  .dot { rx: 50%; ry: 50%; }
+  .title-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #8b949e; font-weight: 600; }
+  .line { font-family: "Cascadia Code", "Fira Code", "Courier New", Consolas, monospace; font-size: 12px; animation: slideIn 0.4s ease-out forwards; opacity: 0; }
+  .prompt { fill: #39d353; font-weight: bold; }
+  .sep { fill: #30363d; }
+  .header-name { fill: #58a6ff; font-weight: bold; font-size: 14px; }
+  .key { fill: #79c0ff; font-weight: bold; }
+  .val { fill: #c9d1d9; }
+  .highlight-val { fill: #f0883e; font-weight: 500; }
+</style>
+  <rect class="bg" x="0" y="0" width="490" height="560" />
+  <circle class="dot" cx="16" cy="16" r="5" fill="#ff5f56" />
+  <circle class="dot" cx="30" cy="16" r="5" fill="#ffbd2e" />
+  <circle class="dot" cx="44" cy="16" r="5" fill="#27c93f" />
+  <text class="title-text" x="245" y="20" text-anchor="middle">nikhil@system:~ (neofetch)</text>
+  <line x1="0" y1="30" x2="490" y2="30" stroke="#30363d" stroke-width="1" />
+  <text class="line prompt" x="20" y="55" style="animation-delay: 0.20s;">nikhil@github ~ $ neofetch</text>
+  <text class="line sep" x="20" y="89" style="animation-delay: 0.35s;">----------------------------------------</text>
+  <text class="line header-name" x="20" y="123" style="animation-delay: 0.50s;">⚡ Nikhil Chalamalla</text>
+  <text class="line" x="20" y="157" style="animation-delay: 0.65s;">
+    <tspan class="key">Role: </tspan>
+    <tspan class="val">Java Full Stack Developer | CSE Student</tspan>
+  </text>
+  <text class="line" x="20" y="191" style="animation-delay: 0.80s;">
+    <tspan class="key">Focus: </tspan>
+    <tspan class="val">Backend Engineering & System Design</tspan>
+  </text>
+  <text class="line" x="20" y="225" style="animation-delay: 0.95s;">
+    <tspan class="key">Primary: </tspan>
+    <tspan class="val">Java, SpringBoot, JavaScript, React.js</tspan>
+  </text>
+  <text class="line" x="20" y="259" style="animation-delay: 1.10s;">
+    <tspan class="key">Backend: </tspan>
+    <tspan class="val">Node.js, Express.js, REST APIs, Microservices</tspan>
+  </text>
+  <text class="line" x="20" y="293" style="animation-delay: 1.25s;">
+    <tspan class="key">Database: </tspan>
+    <tspan class="val">MongoDB, MySQL, PostgreSQL, Oracle</tspan>
+  </text>
+  <text class="line" x="20" y="327" style="animation-delay: 1.40s;">
+    <tspan class="key">Cloud & DevOps: </tspan>
+    <tspan class="val">AWS, Azure, Docker, Kubernetes, Jenkins</tspan>
+  </text>
+  <text class="line" x="20" y="361" style="animation-delay: 1.55s;">
+    <tspan class="key">Algorithms: </tspan>
+    <tspan class="highlight-val">360+ LeetCode Problems Solved 🧠</tspan>
+  </text>
+  <text class="line" x="20" y="395" style="animation-delay: 1.70s;">
+    <tspan class="key">Highlight: </tspan>
+    <tspan class="highlight-val">Real-Time Chat App (SpringBoot + WebSocket)</tspan>
+  </text>
+  <text class="line" x="20" y="429" style="animation-delay: 1.85s;">
+    <tspan class="key">Status: </tspan>
+    <tspan class="highlight-val">Building Scalable AI & Cloud Apps 🚀</tspan>
+  </text>
+  <text class="line sep" x="20" y="463" style="animation-delay: 2.00s;">----------------------------------------</text>
+  <g class="line" style="animation-delay: 2.15s;">
+    <rect x="20" y="487" width="20" height="14" rx="3" fill="#ff5f56" />
+    <rect x="46" y="487" width="20" height="14" rx="3" fill="#ffbd2e" />
+    <rect x="72" y="487" width="20" height="14" rx="3" fill="#27c93f" />
+    <rect x="98" y="487" width="20" height="14" rx="3" fill="#58a6ff" />
+    <rect x="124" y="487" width="20" height="14" rx="3" fill="#bc8cff" />
+    <rect x="150" y="487" width="20" height="14" rx="3" fill="#f0883e" />
+    <rect x="176" y="487" width="20" height="14" rx="3" fill="#39d353" />
+    <rect x="202" y="487" width="20" height="14" rx="3" fill="#79c0ff" />
+  </g>
+</svg>
