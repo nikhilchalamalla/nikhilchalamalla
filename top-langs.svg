@@ -4,8 +4,8 @@
   .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1; }
   .dot { rx: 50%; ry: 50%; }
   .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; fill: #58a6ff; font-weight: bold; }
-  .lang-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; fill: #c9d1d9; font-weight: 500; }
-  .pct { font-family: "Cascadia Code", Consolas, monospace; font-size: 11px; fill: #8b949e; }
+  .lang-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; fill: #f0f6fc; font-weight: 600; }
+  .pct { font-family: "Cascadia Code", Consolas, monospace; font-size: 11.5px; fill: #58a6ff; font-weight: bold; }
 </style>
   <rect class="bg" x="0" y="0" width="420" height="220" />
   <circle class="dot" cx="16" cy="16" r="5" fill="#ff5f56" />
@@ -13,24 +13,24 @@
   <circle class="dot" cx="44" cy="16" r="5" fill="#27c93f" />
   <text class="title" x="60" y="20">Most Used Languages</text>
   <line x1="0" y1="30" x2="420" y2="30" stroke="#30363d" stroke-width="1" />
-  <circle cx="30" cy="61" r="5" fill="#b07219" />
-  <text class="lang-name" x="45" y="65">Java / Spring Boot</text>
-  <text class="pct" x="380" y="65" text-anchor="end">48.5%</text>
-  <rect x="220" y="55" width="140" height="8" rx="4" fill="#21262d" />
-  <rect x="220" y="55" width="106" height="8" rx="4" fill="#b07219" />
-  <circle cx="30" cy="97" r="5" fill="#f1e05a" />
-  <text class="lang-name" x="45" y="101">JavaScript / React</text>
-  <text class="pct" x="380" y="101" text-anchor="end">26.2%</text>
-  <rect x="220" y="91" width="140" height="8" rx="4" fill="#21262d" />
-  <rect x="220" y="91" width="57" height="8" rx="4" fill="#f1e05a" />
-  <circle cx="30" cy="133" r="5" fill="#e34c26" />
-  <text class="lang-name" x="45" y="137">HTML &amp; CSS</text>
-  <text class="pct" x="380" y="137" text-anchor="end">14.8%</text>
-  <rect x="220" y="127" width="140" height="8" rx="4" fill="#21262d" />
-  <rect x="220" y="127" width="32" height="8" rx="4" fill="#e34c26" />
-  <circle cx="30" cy="169" r="5" fill="#3572A5" />
-  <text class="lang-name" x="45" y="173">Python &amp; C++</text>
-  <text class="pct" x="380" y="173" text-anchor="end">10.5%</text>
-  <rect x="220" y="163" width="140" height="8" rx="4" fill="#21262d" />
-  <rect x="220" y="163" width="23" height="8" rx="4" fill="#3572A5" />
+  <circle cx="25" cy="61" r="5" fill="#b07219" />
+  <text class="lang-name" x="38" y="65">Java / Spring Boot</text>
+  <rect x="205" y="55" width="120" height="8" rx="4" fill="#21262d" />
+  <rect x="205" y="55" width="87" height="8" rx="4" fill="#b07219" />
+  <text class="pct" x="402" y="65" text-anchor="end">48.5%</text>
+  <circle cx="25" cy="97" r="5" fill="#f1e05a" />
+  <text class="lang-name" x="38" y="101">JavaScript / React</text>
+  <rect x="205" y="91" width="120" height="8" rx="4" fill="#21262d" />
+  <rect x="205" y="91" width="47" height="8" rx="4" fill="#f1e05a" />
+  <text class="pct" x="402" y="101" text-anchor="end">26.2%</text>
+  <circle cx="25" cy="133" r="5" fill="#e34c26" />
+  <text class="lang-name" x="38" y="137">HTML &amp; CSS</text>
+  <rect x="205" y="127" width="120" height="8" rx="4" fill="#21262d" />
+  <rect x="205" y="127" width="26" height="8" rx="4" fill="#e34c26" />
+  <text class="pct" x="402" y="137" text-anchor="end">14.8%</text>
+  <circle cx="25" cy="169" r="5" fill="#3572A5" />
+  <text class="lang-name" x="38" y="173">Python &amp; C++</text>
+  <rect x="205" y="163" width="120" height="8" rx="4" fill="#21262d" />
+  <rect x="205" y="163" width="18" height="8" rx="4" fill="#3572A5" />
+  <text class="pct" x="402" y="173" text-anchor="end">10.5%</text>
 </svg>

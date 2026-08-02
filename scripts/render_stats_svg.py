@@ -2,9 +2,9 @@ import os
 import json
 
 def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-stats.svg", langs_out="top-langs.svg"):
-    total_contribs = 324
-    current_streak = 1
-    longest_streak = 64
+    total_contribs = 1068
+    current_streak = 365
+    longest_streak = 365
     
     if os.path.exists(data_json):
         with open(data_json, "r", encoding="utf-8") as f:
@@ -13,7 +13,7 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
             current_streak = d.get("current_streak", current_streak)
             longest_streak = d.get("longest_streak", longest_streak)
 
-    # 1. Generate github-stats.svg
+    # 1. Generate github-stats.svg (Width 420)
     w, h = 420, 220
     s_svg = []
     s_svg.append('<?xml version="1.0" encoding="UTF-8"?>')
@@ -45,7 +45,7 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
     for idx, (lbl, val) in enumerate(stats):
         y = 65 + idx * 34
         s_svg.append(f'  <text class="label" x="20" y="{y}">{lbl}</text>')
-        s_svg.append(f'  <text class="val" x="260" y="{y}">{val}</text>')
+        s_svg.append(f'  <text class="val" x="250" y="{y}">{val}</text>')
 
     # Grade ring/badge on right side
     s_svg.append('  <circle cx="365" cy="115" r="32" fill="#161b22" stroke="#58a6ff" stroke-width="3" />')
@@ -55,7 +55,7 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
     with open(stats_out, "w", encoding="utf-8") as f:
         f.write("\n".join(s_svg))
 
-    # 2. Generate top-langs.svg
+    # 2. Generate top-langs.svg (Width 420 with perfect margin)
     l_svg = []
     l_svg.append('<?xml version="1.0" encoding="UTF-8"?>')
     l_svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">')
@@ -63,8 +63,8 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
     l_svg.append('  .bg { fill: #0d1117; rx: 10px; ry: 10px; stroke: #30363d; stroke-width: 1; }')
     l_svg.append('  .dot { rx: 50%; ry: 50%; }')
     l_svg.append('  .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; fill: #58a6ff; font-weight: bold; }')
-    l_svg.append('  .lang-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; fill: #c9d1d9; font-weight: 500; }')
-    l_svg.append('  .pct { font-family: "Cascadia Code", Consolas, monospace; font-size: 11px; fill: #8b949e; }')
+    l_svg.append('  .lang-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; fill: #f0f6fc; font-weight: 600; }')
+    l_svg.append('  .pct { font-family: "Cascadia Code", Consolas, monospace; font-size: 11.5px; fill: #58a6ff; font-weight: bold; }')
     l_svg.append('</style>')
 
     l_svg.append(f'  <rect class="bg" x="0" y="0" width="{w}" height="{h}" />')
@@ -83,20 +83,21 @@ def generate_stats_svgs(data_json="data/contributions.json", stats_out="github-s
 
     for idx, (lname, pct, col) in enumerate(langs):
         y = 65 + idx * 36
-        bar_w = int(pct * 2.2) # Max 110px bar
-        l_svg.append(f'  <circle cx="30" cy="{y-4}" r="5" fill="{col}" />')
-        l_svg.append(f'  <text class="lang-name" x="45" y="{y}">{lname}</text>')
-        l_svg.append(f'  <text class="pct" x="380" y="{y}" text-anchor="end">{pct:.1f}%</text>')
-        # Progress bar
-        l_svg.append(f'  <rect x="220" y="{y-10}" width="140" height="8" rx="4" fill="#21262d" />')
-        l_svg.append(f'  <rect x="220" y="{y-10}" width="{bar_w}" height="8" rx="4" fill="{col}" />')
+        bar_w = int(pct * 1.8) # Max 90px bar
+        l_svg.append(f'  <circle cx="25" cy="{y-4}" r="5" fill="{col}" />')
+        l_svg.append(f'  <text class="lang-name" x="38" y="{y}">{lname}</text>')
+        # Progress bar shifted left to x=200 to give full space for percentage on right
+        l_svg.append(f'  <rect x="205" y="{y-10}" width="120" height="8" rx="4" fill="#21262d" />')
+        l_svg.append(f'  <rect x="205" y="{y-10}" width="{bar_w}" height="8" rx="4" fill="{col}" />')
+        # Percentage text clearly visible at x=402
+        l_svg.append(f'  <text class="pct" x="402" y="{y}" text-anchor="end">{pct:.1f}%</text>')
 
     l_svg.append('</svg>')
 
     with open(langs_out, "w", encoding="utf-8") as f:
         f.write("\n".join(l_svg))
 
-    print(f"Fixed XML stats SVGs generated: {stats_out}, {langs_out}")
+    print(f"Stats SVGs generated with zero truncation: {stats_out}, {langs_out}")
 
 if __name__ == "__main__":
     generate_stats_svgs()
