@@ -14,6 +14,22 @@
   .key { fill: #79c0ff; font-weight: bold; }
   .val { fill: #c9d1d9; }
   .highlight-val { fill: #f0883e; font-weight: 500; }
+  .d-0 { animation-delay: 0.20s; }
+  .d-1 { animation-delay: 0.32s; }
+  .d-2 { animation-delay: 0.44s; }
+  .d-3 { animation-delay: 0.56s; }
+  .d-4 { animation-delay: 0.68s; }
+  .d-5 { animation-delay: 0.80s; }
+  .d-6 { animation-delay: 0.92s; }
+  .d-7 { animation-delay: 1.04s; }
+  .d-8 { animation-delay: 1.16s; }
+  .d-9 { animation-delay: 1.28s; }
+  .d-10 { animation-delay: 1.40s; }
+  .d-11 { animation-delay: 1.52s; }
+  .d-12 { animation-delay: 1.64s; }
+  .d-13 { animation-delay: 1.76s; }
+  .d-14 { animation-delay: 1.88s; }
+  .d-15 { animation-delay: 2.00s; }
 </style>
   <rect class="bg" x="0" y="0" width="490" height="560" />
   <circle class="dot" cx="16" cy="16" r="5" fill="#ff5f56" />
@@ -21,47 +37,47 @@
   <circle class="dot" cx="44" cy="16" r="5" fill="#27c93f" />
   <text class="title-text" x="245" y="20" text-anchor="middle">nikhil@system:~ (neofetch)</text>
   <line x1="0" y1="30" x2="490" y2="30" stroke="#30363d" stroke-width="1" />
-  <text class="line prompt" x="20" y="55" style="animation-delay: 0.20s;">nikhil@github ~ $ neofetch</text>
-  <text class="line sep" x="20" y="89" style="animation-delay: 0.35s;">----------------------------------------</text>
-  <text class="line header-name" x="20" y="123" style="animation-delay: 0.50s;">⚡ Nikhil Chalamalla</text>
-  <text class="line" x="20" y="157" style="animation-delay: 0.65s;">
+  <text class="line prompt d-0" x="20" y="55">nikhil@github ~ $ neofetch --system</text>
+  <text class="line sep d-1" x="20" y="89">----------------------------------------</text>
+  <text class="line header-name d-2" x="20" y="123">⚡ Nikhil Chalamalla</text>
+  <text class="line d-3" x="20" y="157">
     <tspan class="key">Role: </tspan>
-    <tspan class="val">Java Full Stack Developer | CSE Student</tspan>
+    <tspan class="val">Java Full Stack & Backend Engineer</tspan>
   </text>
-  <text class="line" x="20" y="191" style="animation-delay: 0.80s;">
-    <tspan class="key">Focus: </tspan>
-    <tspan class="val">Backend Engineering & System Design</tspan>
+  <text class="line d-4" x="20" y="191">
+    <tspan class="key">Education: </tspan>
+    <tspan class="val">B.Tech CSE Student</tspan>
   </text>
-  <text class="line" x="20" y="225" style="animation-delay: 0.95s;">
-    <tspan class="key">Primary: </tspan>
-    <tspan class="val">Java, SpringBoot, JavaScript, React.js</tspan>
+  <text class="line d-5" x="20" y="225">
+    <tspan class="key">Specialization: </tspan>
+    <tspan class="val">Backend Systems & System Design</tspan>
   </text>
-  <text class="line" x="20" y="259" style="animation-delay: 1.10s;">
-    <tspan class="key">Backend: </tspan>
-    <tspan class="val">Node.js, Express.js, REST APIs, Microservices</tspan>
+  <text class="line d-6" x="20" y="259">
+    <tspan class="key">Primary Stack: </tspan>
+    <tspan class="val">Java, SpringBoot, React.js, Express</tspan>
   </text>
-  <text class="line" x="20" y="293" style="animation-delay: 1.25s;">
-    <tspan class="key">Database: </tspan>
+  <text class="line d-7" x="20" y="293">
+    <tspan class="key">Databases: </tspan>
     <tspan class="val">MongoDB, MySQL, PostgreSQL, Oracle</tspan>
   </text>
-  <text class="line" x="20" y="327" style="animation-delay: 1.40s;">
+  <text class="line d-8" x="20" y="327">
     <tspan class="key">Cloud & DevOps: </tspan>
     <tspan class="val">AWS, Azure, Docker, Kubernetes, Jenkins</tspan>
   </text>
-  <text class="line" x="20" y="361" style="animation-delay: 1.55s;">
+  <text class="line d-9" x="20" y="361">
     <tspan class="key">Algorithms: </tspan>
-    <tspan class="highlight-val">360+ LeetCode Problems Solved 🧠</tspan>
+    <tspan class="highlight-val">360+ LeetCode Solved 🧠</tspan>
   </text>
-  <text class="line" x="20" y="395" style="animation-delay: 1.70s;">
-    <tspan class="key">Highlight: </tspan>
-    <tspan class="highlight-val">Real-Time Chat App (SpringBoot + WebSocket)</tspan>
+  <text class="line d-10" x="20" y="395">
+    <tspan class="key">Core Project: </tspan>
+    <tspan class="highlight-val">Real-Time Chat App (SpringBoot+STOMP)</tspan>
   </text>
-  <text class="line" x="20" y="429" style="animation-delay: 1.85s;">
-    <tspan class="key">Status: </tspan>
-    <tspan class="highlight-val">Building Scalable AI & Cloud Apps 🚀</tspan>
+  <text class="line d-11" x="20" y="429">
+    <tspan class="key">Goal: </tspan>
+    <tspan class="highlight-val">Building High-Throughput Cloud Systems 🚀</tspan>
   </text>
-  <text class="line sep" x="20" y="463" style="animation-delay: 2.00s;">----------------------------------------</text>
-  <g class="line" style="animation-delay: 2.15s;">
+  <text class="line sep d-12" x="20" y="463">----------------------------------------</text>
+  <g class="line d-13">
     <rect x="20" y="487" width="20" height="14" rx="3" fill="#ff5f56" />
     <rect x="46" y="487" width="20" height="14" rx="3" fill="#ffbd2e" />
     <rect x="72" y="487" width="20" height="14" rx="3" fill="#27c93f" />
