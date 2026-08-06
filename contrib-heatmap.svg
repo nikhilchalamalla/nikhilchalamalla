@@ -21,8 +21,8 @@
   <circle class="dot" cx="44" cy="16" r="5" fill="#27c93f" />
   <text class="title-text" x="430" y="20" text-anchor="middle">nikhil@contributions:~ (heatmap)</text>
   <line x1="0" y1="30" x2="860" y2="30" stroke="#30363d" stroke-width="1" />
-  <text class="header-stat" x="35" y="50">🔥 1,077 contributions in last year</text>
-  <text class="badge" x="825" y="50" text-anchor="end">⚡ Current Streak: 368 days  •  🏆 Longest: 368 days</text>
+  <text class="header-stat" x="35" y="50">🔥 1,078 contributions in last year</text>
+  <text class="badge" x="825" y="50" text-anchor="end">⚡ Current Streak: 0 days  •  🏆 Longest: 368 days</text>
   <text class="label" x="12" y="88.5">Mon</text>
   <text class="label" x="12" y="117.5">Wed</text>
   <text class="label" x="12" y="146.5">Fri</text>
@@ -2596,10 +2596,17 @@
     </g>
   </g>
   <g class="day-cell">
-    <rect class="day-box" x="789.0" y="108.5" width="11" height="11" fill="#006d32" />
+    <rect class="day-box" x="789.0" y="108.5" width="11" height="11" fill="#26a641" />
     <g class="tooltip" transform="translate(675.0, 78.5)">
       <rect class="tt-bg" x="0" y="0" width="175" height="24" />
-      <text class="tt-text" x="87" y="16" text-anchor="middle">2 contributions on August 5th.</text>
+      <text class="tt-text" x="87" y="16" text-anchor="middle">3 contributions on August 5th.</text>
+    </g>
+  </g>
+  <g class="day-cell">
+    <rect class="day-box" x="789.0" y="123.0" width="11" height="11" fill="#69f0a0" />
+    <g class="tooltip" transform="translate(675.0, 93.0)">
+      <rect class="tt-bg" x="0" y="0" width="175" height="24" />
+      <text class="tt-text" x="87" y="16" text-anchor="middle">3 contributions on August 6th.</text>
     </g>
   </g>
   <text class="label" x="710" y="193.5">Less</text>
