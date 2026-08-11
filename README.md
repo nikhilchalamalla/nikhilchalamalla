@@ -29,7 +29,7 @@
 
 ## 💫 About Me
 
-Hi 👋 I'm **Nikhil **! A passionate **Java Full Stack Developer** and **Backend Systems Engineer** pursuing my B.Tech in Computer Science & Engineering.
+Hi 👋 I'm **Nikhil Chalamalla**! A passionate **Java Full Stack Developer** and **Backend Systems Engineer** pursuing my B.Tech in Computer Science & Engineering.
 
 I specialize in building high-throughput, resilient backend services, scalable distributed systems, and modern full-stack web applications. I thrive at the intersection of algorithmic efficiency and clean software architecture.
 
