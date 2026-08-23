@@ -1,45 +1,10 @@
 {
   "username": "nikhilchalamalla",
-  "total_contributions": 1086,
+  "total_contributions": 1073,
   "current_streak": 0,
-  "longest_streak": 370,
-  "updated_at": "2026-08-22T06:58:02.185358",
+  "longest_streak": 364,
+  "updated_at": "2026-08-23T06:59:50.450510",
   "days": [
-    {
-      "date": "2025-08-17",
-      "level": 1,
-      "count": 2
-    },
-    {
-      "date": "2025-08-18",
-      "level": 1,
-      "count": 2
-    },
-    {
-      "date": "2025-08-19",
-      "level": 1,
-      "count": 2
-    },
-    {
-      "date": "2025-08-20",
-      "level": 1,
-      "count": 2
-    },
-    {
-      "date": "2025-08-21",
-      "level": 1,
-      "count": 2
-    },
-    {
-      "date": "2025-08-22",
-      "level": 1,
-      "count": 2
-    },
-    {
-      "date": "2025-08-23",
-      "level": 1,
-      "count": 2
-    },
     {
       "date": "2025-08-24",
       "level": 1,
@@ -1857,6 +1822,11 @@
     },
     {
       "date": "2026-08-22",
+      "level": 1,
+      "count": 1
+    },
+    {
+      "date": "2026-08-23",
       "level": 0,
       "count": 0
     }
