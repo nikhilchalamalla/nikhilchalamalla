@@ -15,11 +15,11 @@
   <text class="title" x="60" y="20">Nikhil's GitHub Stats</text>
   <line x1="0" y1="30" x2="420" y2="30" stroke="#30363d" stroke-width="1" />
   <text class="label" x="20" y="65">Total Contributions (Past Year):</text>
-  <text class="val" x="250" y="65">1,067</text>
+  <text class="val" x="250" y="65">1,068</text>
   <text class="label" x="20" y="99">Current Contribution Streak:</text>
   <text class="val" x="250" y="99">0 Days</text>
   <text class="label" x="20" y="133">Longest Streak Record:</text>
-  <text class="val" x="250" y="133">364 Days</text>
+  <text class="val" x="250" y="133">365 Days</text>
   <text class="label" x="20" y="167">Public Repositories:</text>
   <text class="val" x="250" y="167">39 Repos</text>
   <circle cx="365" cy="115" r="32" fill="#161b22" stroke="#58a6ff" stroke-width="3" />
